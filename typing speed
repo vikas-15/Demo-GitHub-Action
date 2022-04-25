@@ -1,0 +1,171 @@
+import random
+import time
+from tkinter import*
+#from vocabulary.vocabulary import Vocabulary as vb
+#vb=vocabulary()
+playername=input("enter your name")
+print('hello',playername,"are you ready to play this amazing typing game")
+print("give your response")
+response=input("  ")
+list1 = ['apathatic', 'joyous', 'standing', 'handsome', 'available', 'dependent', 'divergent', 'arrogant',
+             'academic', 'advertising', 'aliance', 'anxiety', 'anticipate', 'biological', 'birthday', 'budget',
+             'capabality', 'celebration', 'championship', 'chracterize', 'circumstances']
+
+list2=['4896@%','67iyk','++12%','#5*9^','@$&@!','{,.67','!%)9&','_$57!', '!!12o','BUdgeT','ArrOGAnt','AnTIcipatE','apaTHAtiC','48@@PPSS']
+
+list3=["superman didn't always fly","We need oxygen to live","India has largest postal network","kumbh mela gathering visible from space",
+       "water on moon discovered by INDIA","sun rises from East","shampooing is an indian concept","water<1% is used for drinking",
+       "water consist Hydrogen and oxygen","human bones are 31% of water"]
+
+list4=['apathatic joYouS' , 'standing hanDsomE', 'available dePendenT', 'diverent arroGanT',
+             'academic AdverTisinG', 'aliance anxIetY', 'antiipate bioLOgicaL', 'birthday buDgeT',
+             'capabality celeBratioN', 'championship chracTerizE', 'circumstances apaTHAtiC',
+       '4896@% 67iyk','++12% #5*9^','@$&@! {,.67','!%)9& _$57!', '!!12o 22@@']
+
+list5=["India is a great country where people speak different languages but the national language is Hindi. India is full of different castes ,creeds, religion and cultures but they live together. That is the reasons India is famous for the common saying of unity in diversity India is the seventh-largest country in the whole world.",
+
+       "Earth is the fifth largest of the planets in the solar system. It is smaller than the four gas giants — Jupiter, Saturn, Uranus and Neptune. Earth has a diameter of roughly 8,000 miles (13,000 kilometers) and is round because gravity pulls matter into a ball. But, it's not perfectly round."]
+
+if response == 'yes':
+    print("This is game to enchance your typing speed and also help to improve your vocabulary")
+    time.sleep(2)
+    print(" Rules of game are discussed below:")
+    print("1. The game has 5 levels and difficulty level is also increases according to level")
+    print("2. You have given a time according to given vocabulary within this time frame you have to type a words display on your screen")
+    print("3. If you complete all 5 levels then you won the game")
+    print("4. Otherwise failure is the key of success try again and again")
+    print("Goodluck",playername)
+    time.sleep(10)
+
+else :
+    print("ok Bye")
+    exit()
+
+
+def level1():
+    print("LEVEL 1: try to be fast in 6 second")
+    time.sleep(2)
+    for i in range (5):
+            random.shuffle(list1)
+            word = random.choice(list1)
+            print(word)
+            start=time.time()
+            answer=input(" ")
+            end=time.time()
+            #print(vb.meaning(word))
+            print('total time taken',end-start)
+            totaltime=end-start
+            if totaltime>6:
+                print("you exceed time limit","you loss")
+                exit()
+            elif (answer)!=word:
+                print("You spell word incorrect ","you loss")
+                exit()
+            else:
+                continue
+    print("congratulation,you successfully completed level 1 ")
+    time.sleep(5)
+level1()
+
+
+def level2():
+    print("LEVEL 2: try to be fast in 11 second")
+    time.sleep(2)
+    for i in range(5):
+        random.shuffle(list2)
+        word = random.choice(list2)
+        print(word)
+        start = time.time()
+        answer = input(" ")
+        end = time.time()
+        #print(dictionary.meaning(word))
+        print('total time taken', end - start)
+        totaltime = end - start
+        if totaltime > 11:
+            print("you exceed time limit", "you loss")
+            exit()
+        if (answer) != word:
+            print("You spell word incorrect ", "you loss")
+            exit()
+        else:
+            continue
+    print("congratulation,you successfully completed level 2 ")
+    time.sleep(5)
+level2()
+
+
+def level3():
+    print("LEVEL 3: try to be fast in 15 second")
+    time.sleep(2)
+    for i in range(5):
+        random.shuffle(list3)
+        word = random.choice(list3)
+        print(word)
+        start = time.time()
+        answer = input(" ")
+        end = time.time()
+        #print(dictionary.meaning(word))
+        print('total time taken', end - start)
+        totaltime = end - start
+        if totaltime > 15:
+            print("you exceed time limit", "you loss")
+            exit()
+        elif(answer) != word:
+            print("You spell word incorrect ", "you loss")
+            exit()
+        else:
+            continue
+    print("congratulation,you successfully completed level 3 ")
+    time.sleep(5)
+level3()
+
+
+def level4():
+    print("LEVEL 4: try to be fast in 20 second")
+    time.sleep(2)
+    for i in range(5):
+        random.shuffle(list1)
+        word = random.choice(list2)
+        print(word)
+        start = time.time()
+        answer = input(" ")
+        end = time.time()
+        #print(dictionary.meaning(word))
+        print('total time taken', end - start)
+        totaltime = end - start
+        if totaltime > 20:
+            print("you exceed time limit", "you loss")
+            exit()
+        elif(answer) != word:
+            print("You spell word incorrect ", "you loss")
+            exit()
+        else:
+            continue
+print("congratulation,you successfully completed level 4 ")
+#time.sleep(5)
+level4()
+
+
+def level5():
+    print("LEVEL 5: try to be fast in 25 second")
+    time.sleep(2)
+    for i in range(5):
+        random.shuffle(list1)
+        word = random.choice(list1)
+        print(word)
+        start = time.time()
+        answer = input(" ")
+        end = time.time()
+        #print(dictionary.meaning(word))
+        print('total time taken', end - start)
+        totaltime = end - start
+        if totaltime > 25:
+            print("you exceed time limit", "you loss")
+            exit()
+        elif(answer) != word:
+            print("You spell word incorrect ", "you loss")
+            exit()
+    print("congratulation,you successfully completed level 5 ")
+    print("Congratulation ! You won the game")
+level5()
+
